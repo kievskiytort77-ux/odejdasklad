@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "odejdasklad",
+  "private_key_id": "9324f62a9a2f6573b614dff79504874738890d23",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDklpG1gWFoWbmb\nNQhKsH5gdAO/wGK8uAxXd4Gp6u71yBRzGXMzbom9bN/DBlUfqpzZjfw3qOgzH/GR\nX+NSODYfaWnMmPR2hJEdeLRzRVoJEy6FVF7G+SkDtHYQ4l2CSXNtYhoCFTRl4trl\n8upnvp+5iMDt64JzHgLECGOh+mdSYFs7M3IOs9u+S2rQhUYzkb8vj/jTtGKgbf2u\nlXnZxXn6prUKCixAwIVoCCUsEoozr0wYlZ07mOkGhCNvX9jVf2ZM4ez70IvaOP6+\nGSmQ43lfsQwJIjs9ejpEQos2O+G/uLvT0ZUdGIJn9u3dX2eeFBbzLF9sfRGZJqqc\n0Y8Sl4zFAgMBAAECggEACsFI1sThG+NI19QdcUIvmAMtX/rByoZQUlc1mxSKLLc+\nuxGh+XQEeAyk1Iy6OZSx74x+JvJEBo/EsmXUELzDUyQHDdDOg7sGBuB0gQ3syAuG\nf1ByayMy+lEl0vKLmsMw8p8QgTOVNQwA55vPypTN+BFGnosbpqXtVGLeqTLaZKY8\nL2Itu4R9liWoAdSQDnk6ErfDIOW7QaFePZqweXiRGO5quw/0IiPLH0JeuSACbH0v\nWDE47JFRBbzOp0am+w3sl7ZoeLqm0ouLWvyWBrqUgfmMlObsPDfP2HIP6+dG757m\ncnfv6oKRhQr5EkBX+XNSGVnuezOzFHEoFSIC5RKcSwKBgQD38w+HocFDHNAk1IiN\n8DgWKtb5ZqNNpsm71CExrdsio9Ggl+Dkp9201GkNnNEe62C3v9wigtWmEl+Lsr+L\nZEtiN/RY7BIdimvqO56TkG0BJIxjX+vCCRG4UJ26rWbbkDl5EekyXwluGJvj2G9J\nGW8oyDm95XJRt8wW7+gfTxA2vwKBgQDsApQnDqgzCpFi1fUCES5cL4jQ4O+xsRHQ\n8en1t4OtmYouGgR8BKfDlElKKYibWkW1u1mJhGWlafdQH3sLq9MzD6fy3KIdrjVy\nnPfIaW+ZxH/QGcp9wl9z8Olm+WTqYagE6qPRlPbK80jDw3tUStYIuH+onWbMUmkv\n0RoV4omBewKBgQCHIUOUcraGIfzaJa5qVMHsatqQP7y+RCjrodeZYJvuDAPiFwPs\n+gOdWqoKTi22QSeL3RdXA6D2ikriMr+rczSWSdJ0Z+wTh2360RVCbNLLbaTJP+yX\n6iNrJRxhMcG95aM89WL3Hc5g3y6OhVVZLHBldIHrmVGtcZLb6VHDRm6atwKBgQCM\n6fU/ZLb00sh/tLP3Kf7+N7t+y+8Rr2Gt2eMRPSM4Eca5Q/uNeNIaKn2f9DCGYV3h\n5hzNyOlP3Hc3tbQoAc22XRCwJx/8jLmI10Pyu1FRBEw0GlIWyGlptlwFib7BWtGR\nLe/mAQVho+S8TgljCNPGnTJLoL9yG3qGfFkQ3BOx5QKBgQCmrQ6N047sOxucjhlP\naluCrxQAacoTmv1aCo6zl8iVHFqQ0j//L2ZpVa5p7bFCErNHOvTahtSsj0noAsKb\nP6YaYPlhLywu1ix8pjf7sIpfXNh9Cr7eYe7Ufau9JQb49gQXOwyxVgvTeKTagRdo\nmhQH0m2zl7VlkgpgfvjHuS0CmA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "odejdasklad@odejdasklad.iam.gserviceaccount.com",
+  "client_id": "117228500145440793322",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/odejdasklad%40odejdasklad.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
