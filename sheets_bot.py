@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 TOKEN = os.getenv("BOT_TOKEN")
 
 # Список разрешённых username (добавь своих коллег)
-ALLOWED_USERS = ["ez_life_92"]  # добавь сюда username коллег
+ALLOWED_USERS = ["ez_life_92","YGyuliya"]  # добавь сюда username коллег
 
 SHEET_ID = "1Iaa8luxu2VOD6iyR15KT5CFxFoqSDvv6Ef-yLEqu0I4"
 
