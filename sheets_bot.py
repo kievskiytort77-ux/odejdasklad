@@ -240,19 +240,59 @@ async def recv_price(update: Update, context: ContextTypes.DEFAULT_TYPE):
         price = float(update.message.text)
         margin = calc_margin(cost, price)
         sheet = get_sheet()
-        sheet.append_row([
-            "[фото]",
-            data["model"],
-            data["color"],
-            data["xs"],
-            data["s"],
-            data["m"],
-            data["l"],
-            data["xl"],
-            cost,
-            price,
-            f"{margin}%"
-        ])
+        rows = sheet.get_all_values()
+
+        # Ищем существующий товар с таким же названием и цветом
+        found_row = None
+        for i, row in enumerate(rows, 1):
+            if len(row) > 2 and row[1] == data["model"] and row[2] == data["color"]:
+                found_row = i
+                break
+
+        if found_row:
+            # Прибавляем количество к существующей строке
+            row = sheet.row_values(found_row)
+            new_xs = int(row[3] or 0) + int(data["xs"])
+            new_s  = int(row[4] or 0) + int(data["s"])
+            new_m  = int(row[5] or 0) + int(data["m"])
+            new_l  = int(row[6] or 0) + int(data["l"])
+            new_xl = int(row[7] or 0) + int(data["xl"])
+            sheet.update(f'D{found_row}:H{found_row}', [[new_xs, new_s, new_m, new_l, new_xl]])
+            await update.message.reply_text(
+                f"✅ *Остаток обновлён!*\n\n"
+                f"*{data['model']}* ({data['color']})\n"
+                f"XS:{new_xs} S:{new_s} M:{new_m} L:{new_l} XL:{new_xl}",
+                parse_mode="Markdown"
+            )
+        else:
+            # Новый товар — добавляем с отступом 6 строк
+            last_row = len(rows)
+            next_row = last_row + 7
+            sheet.update(f'A{next_row}:K{next_row}', [[
+                "[фото]",
+                data["model"],
+                data["color"],
+                data["xs"],
+                data["s"],
+                data["m"],
+                data["l"],
+                data["xl"],
+                cost,
+                price,
+                f"{margin}%"
+            ]])
+            await update.message.reply_text(
+                f"✅ *Товар добавлен!*\n\n"
+                f"*{data['model']}* ({data['color']})\n"
+                f"XS:{data['xs']} S:{data['s']} M:{data['m']} L:{data['l']} XL:{data['xl']}\n"
+                f"Себестоимость: {cost}₴ | Цена: {price}₴ | Маржа: {margin}%",
+                parse_mode="Markdown"
+            )
+        context.user_data.clear()
+        return ConversationHandler.END
+    except Exception as e:
+        await update.message.reply_text(f"❌ Ошибка: {e}")
+        return ConversationHandler.END
         await update.message.reply_text(
             f"✅ *Товар добавлен!*\n\n"
             f"*{data['model']}* ({data['color']})\n"
